@@ -61,6 +61,7 @@ public class SingleImageResize extends HttpServlet {
         // 設定回應格式 "image/jpeg" or "image/png" ...
         resp.setContentType("image/" + formatName);
         ImageIO.write(exportBFImage, formatName, out);
+        out.close();
     }
 
     @Override
