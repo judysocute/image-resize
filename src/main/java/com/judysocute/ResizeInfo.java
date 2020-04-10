@@ -10,15 +10,19 @@ class ResizeInfo {
     public int m_height;
 
     /**
-     *
      * @param sSize {String} - 字串通常是 60x60 120x200 這種格式
      */
     ResizeInfo(String sSize) {
         this(sSize.split("x"));
     }
 
-    ResizeInfo(String[] spSize) {
+    private ResizeInfo(String[] spSize) {
         m_width = Integer.parseInt(spSize[0]);
         m_height = Integer.parseInt(spSize[1]);
+    }
+
+    @Override
+    public String toString() {
+        return m_width + "x" + m_height;
     }
 }
