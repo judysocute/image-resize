@@ -56,7 +56,7 @@ public class ZipImage extends HttpServlet {
             ZipEntry zipEntry = new ZipEntry(fileName + resizeInfo.toString() + "." + formatName);
             try {
                 BufferedImage bufferedImage = ImageIO.read(imagePart.getInputStream());
-                // 建立一個空白的 BufferedImage 物件，
+                // 建立一個空白的 BufferedImage 物件
                 // 寬度、高度 為使用者輸入的
                 // 輸出類型為使用者上傳的圖片類型
                 BufferedImage exportBFImage = new BufferedImage(resizeInfo.m_width, resizeInfo.m_height, bufferedImage.getType());
